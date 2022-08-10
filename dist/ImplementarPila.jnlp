@@ -8,7 +8,7 @@
   </information>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="ImplementarPila.jar" size="2845" download="eager" />
+    <jar href="ImplementarPila.jar" size="4128" download="eager" />
     <jar href="lib\pila.jar" size="7694" download="eager" />
   </resources>
   <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="ImplementarPila" >
