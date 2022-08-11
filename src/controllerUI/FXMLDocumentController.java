@@ -5,16 +5,17 @@
  */
 package controllerUI;
 
+
 import datos.Productos;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Label;
 import javafx.scene.web.WebEngine;
 import javafx.scene.web.WebView;
 import modelo.Pila;
+import modelo.Tools;
 
 /**
  *
@@ -32,6 +33,13 @@ public class FXMLDocumentController implements Initializable {
     private void handleButtonAction(ActionEvent event) {
         System.out.println("You clicked me!");
        // label.setText("Hello World!");
+       
+       Productos objp = new Productos ("dd", 0, 0);
+       pilap.apilar(objp);
+       
+       String mostrarPila = Tools.convertirPilaAHtml(pilap);
+       
+       webEngine.loadContent(mostrarPila);
     }
 
     @Override

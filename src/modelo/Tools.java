@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package vista;
+package modelo;
 
 import datos.Productos;
 import modelo.OperacionesPila;
@@ -43,6 +43,8 @@ public class Tools {
                 Productos e = q.desapilar();
                 sb.append("<tr>").append("<td>");
                 sb.append(e.getNombreProducto());
+                sb.append(e.getCantidadProducto());
+                sb.append(e.getValorProducto());
                 sb.append("</td>").append("</tr>");
             }
             while (!q.estaVacia());
@@ -66,20 +68,20 @@ public class Tools {
      * @param texto
      return 
      
-    <editor-fold defaultstate="collapsed" desc="String convertirPilaAHtml(Pila<Valor> p, String texto)">
-    **/
-    public static String convertirPilaAHtml(Pila<Productos> p, String texto)
-    {
-        String html = "<br><center>Se retiro " + texto + "</center></br>";
-        StringBuilder sb = new StringBuilder(convertirPilaAHtml(p));
-        try
-        {
-            sb.replace(sb.indexOf("<noscript>"), sb.indexOf("</noscript>"), html);
-        }
-        catch (StringIndexOutOfBoundsException ex)
-        {
-        }
-        
-        return sb.toString();
-    }
+//    <editor-fold defaultstate="collapsed" desc="String convertirPilaAHtml(Pila<Valor> p, String texto)">
+//    **/
+//    public static String convertirPilaAHtml(Pila<Productos> p, String texto)
+//    {
+//        String html = "<br><center>Se retiro " + texto + "</center></br>";
+//        StringBuilder sb = new StringBuilder(convertirPilaAHtml(p));
+//        try
+//        {
+//            sb.replace(sb.indexOf("<noscript>"), sb.indexOf("</noscript>"), html);
+//        }
+//        catch (StringIndexOutOfBoundsException ex)
+//        {
+//        }
+//        
+//        return sb.toString();
+//    }
 }
